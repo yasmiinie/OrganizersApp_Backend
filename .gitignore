@@ -1,0 +1,30 @@
+# Dependency directories
+node_modules/
+
+# Environment variables file
+.env
+
+# Logs
+logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Optional: IDE or editor specific files
+.vscode/
+.idea/
+
+# Optional: Ignore production build files
+/build/
+/public/build/
+
+# Optional: Ignore database files
+*.sqlite
+
+# Optional: Ignore package-lock.json if using npm
+package-lock.json
+
+# Optional: Ignore yarn.lock if using Yarn
+yarn.lock
