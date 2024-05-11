@@ -3,12 +3,14 @@ const express = require('express');
 const app = express();
 const taskRouter = require('./routers/task.router');
 const organizerRouter = require('./routers/organizer.router');
+const organiseRouter = require('./routers/organise.router');
 
 const PORT = process.env.PORT || 3000 ;
 
 app.use(express.json());
 app.use('/task', taskRouter);
 app.use('/organizer', organizerRouter);
+app.use('/organise', organiseRouter);
 
 app.listen(PORT , ()=>{
     console.log(`\n✅ Server is running on http://localhost:${PORT}/`);

@@ -8,7 +8,12 @@ async function getOrganizers() {
     return await Organizer.findAll();
 }
 
+async function getOrgById(id) {
+    return await Organizer.findByPk(id);
+}
+
 module.exports ={
     createOrganizer,
     getOrganizers,
+    getOrgById
 }
