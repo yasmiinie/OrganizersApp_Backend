@@ -4,7 +4,6 @@ const { DataTypes } = require('sequelize');
 const Organizer = db.define('Organizer',{
     idOrg: {type :DataTypes.INTEGER,
         primaryKey: true},
-    
     firstname: DataTypes.STRING,
     lastname: DataTypes.STRING,
     phone: DataTypes.INTEGER,

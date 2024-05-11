@@ -12,7 +12,7 @@ const sequelize = new Sequelize(process.env.DB,{
 });
 
 sequelize.sync().then(()=>{
-    console.log('Database connected successfully!');
+    console.log('\n✅ Database connected successfully !');
 }).catch((err)=>{
     console.error(err);
 });

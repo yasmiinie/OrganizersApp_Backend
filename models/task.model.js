@@ -14,7 +14,8 @@ const Task = db.define('Task', {
     type:  DataTypes.ENUM('CheckIn', 'Normal', 'Supervision'),
     late:  DataTypes.BOOLEAN,
     finished:DataTypes.BOOLEAN,
-    idSupervisor:DataTypes.INTEGER
+    idSupervisor:{ type:DataTypes.INTEGER ,
+                 allowNull: true}
 })
 
 Task.belongsTo(Organizer,{foreignKey: 'idSupervisor' , as: 'supervisor'} );
