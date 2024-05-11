@@ -22,6 +22,7 @@ Thumbs.db
 
 # Optional: Ignore database files
 *.sqlite
+*.sql
 
 # Optional: Ignore package-lock.json if using npm
 package-lock.json
