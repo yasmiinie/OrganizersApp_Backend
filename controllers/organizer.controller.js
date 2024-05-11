@@ -9,7 +9,17 @@ async function createOrganizer(req , res) {
     }
 }
 
+async function getOrganizers(req ,res) {
+    try {
+        const org = await orgnizerService.getOrganizers();
+        res.status(201).json(org);
+
+    } catch (error) {
+        res.status(401).json(error);
+    }
+}
 
 module.exports = {
     createOrganizer,
+    getOrganizers,
 }

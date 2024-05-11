@@ -11,6 +11,17 @@ async function createTask(req , res){
     }
 }
 
+async function getTasks(req ,res) {
+    try {
+        const task = await taskService.getTasks();
+        res.status(201).json(task);
+
+    } catch (error) {
+        res.status(401).json(error);
+    }
+}
+
 module.exports ={
     createTask,
+    getTasks,
 }
