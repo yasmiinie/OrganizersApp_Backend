@@ -1,4 +1,5 @@
 const Organizer = require('../models/organizers.model');
+const Organise = require('../models/orgnise.model');
 
 
 async function getTasksForOrg(idOrg) {
@@ -7,8 +8,11 @@ async function getTasksForOrg(idOrg) {
     });
 }
 
-async function addTaskToOrg(dataTask) {
-    return await Organizer.addTask(dataTask);
+async function addTaskToOrg(idO, idT ) {
+    return await Organise.create({
+        idOrg: idO,
+        idTask: idT
+    });
 }
 
 
